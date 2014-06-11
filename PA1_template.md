@@ -107,7 +107,7 @@ Total number of missing steps observations across all intervals and days:
 
 
 ```r
-length(which(is.na(activityData)))
+sum(is.na(activityData))
 ```
 
 ```

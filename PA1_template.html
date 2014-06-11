@@ -265,7 +265,7 @@ meanByInterval &lt;- sapply(intervals, function(byInterval) {
 
 <p>Total number of missing steps observations across all intervals and days:</p>
 
-<pre><code class="r">length(which(is.na(activityData)))
+<pre><code class="r">sum(is.na(activityData))
 </code></pre>
 
 <pre><code>## [1] 2304

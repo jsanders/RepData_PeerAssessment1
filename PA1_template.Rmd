@@ -82,7 +82,7 @@ as.numeric(names(which.max(meanByInterval)))
 Total number of missing steps observations across all intervals and days:
 
 ```{r}
-length(which(is.na(activityData)))
+sum(is.na(activityData))
 ```
 
 Add a column where NA steps observations are imputed using the mean for the interval of the missing value across all days:
