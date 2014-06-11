@@ -161,7 +161,7 @@ Let's add a new variable that differentiates between weekdays and weekends:
 ```r
 dayNames <- weekdays(as.POSIXct(activityData$date))
 activityData$dayType <-
-  ifelse(dayNames == 'Saturday' | dayNames == 'Sunday', 'weekend', 'weekday')
+  ifelse(dayNames %in% c('Saturday', 'Sunday'), 'weekend', 'weekday')
 ```
 
 

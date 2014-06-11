@@ -308,7 +308,7 @@ hist(imputedSummedByDate)
 
 <pre><code class="r">dayNames &lt;- weekdays(as.POSIXct(activityData$date))
 activityData$dayType &lt;-
-  ifelse(dayNames == &#39;Saturday&#39; | dayNames == &#39;Sunday&#39;, &#39;weekend&#39;, &#39;weekday&#39;)
+  ifelse(dayNames %in% c(&#39;Saturday&#39;, &#39;Sunday&#39;), &#39;weekend&#39;, &#39;weekday&#39;)
 </code></pre>
 
 <pre><code class="r">library(plyr)
